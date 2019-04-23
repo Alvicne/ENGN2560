@@ -25,7 +25,8 @@ def parse_args():
                         default=160, type=int)
     parser.add_argument('--copy', dest='copy_frames', help='copy frames without filtering',
                         action='store_true')
- 
+    parser.add_argument('--type', dest  = 'extIn', help = 'readin picture types',
+			type = str)
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(1)
@@ -108,6 +109,7 @@ def distribute_keypoints(kps, img_size, grid_size, num_features):
     ''' 
     Sample interest points on 2D grid for better homography
     The results is a set of points evenly distributed over 2D
+    the socore of different grid point (set the best score on each grid point)
     '''
     # kp index and score
     kp_grids = np.zeros((grid_size, grid_size, num_features), dtype=np.int) - 1
@@ -115,6 +117,10 @@ def distribute_keypoints(kps, img_size, grid_size, num_features):
     grid_width, grid_height = np.ceil(img_size / grid_size)
 
     # insert kp into grids
+    #print(img_size)
+    #print((grid_width, grid_height))
+    #print(grid_size)
+    #print(num_features)
     for kp_ind, kp in enumerate(kps):
         x, y = kp.pt
         score = kp.response
@@ -153,6 +159,7 @@ def fit_homography(kp1, kp2, matches, img_size=None, src_img=None):
         valid_matches = [m for m in matches if m.queryIdx in kp_list]
 
     # convert kp to pts
+    #print(len(valid_matches))
     src_pts = np.float32([ kp1[m.queryIdx].pt for m in valid_matches ]).reshape(-1,1,2)
     dst_pts = np.float32([ kp2[m.trainIdx].pt for m in valid_matches ]).reshape(-1,1,2)
 
@@ -192,13 +199,14 @@ def match_frames(prev_frame, curr_frame, params):
     # init orb detector/matcher
     orb = cv2.ORB(num_feats)
     bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-    
+    #print(prev_frame.shape)
+    #print(curr_frame.shape)
     # resize frames if necessary
     if np.abs(scale-1) > 1e-3:
         prev_frame = cv2.resize(prev_frame, (0,0), fx=scale, fy=scale)
         curr_frame = cv2.resize(curr_frame, (0,0), fx=scale, fy=scale)
-    h, w, c = curr_frame.shape
-
+    h, w, c = prev_frame.shape
+    #######################################################CHANGE HERE########################################
     # check if prev_frame and curr_frame are blurry
     prev_score = image_quality(prev_frame)
     curr_score = image_quality(curr_frame)
@@ -212,6 +220,13 @@ def match_frames(prev_frame, curr_frame, params):
 
     # orb detect and descriptors
     kp1, des1 = orb.detectAndCompute(prev_frame, None)
+    #print(kp1)
+    for kp_ind, kp in enumerate(kp1):
+        x, y = kp.pt
+       # print(kp_ind)
+       # print((x,y))
+    #print(prev_frame.shape)
+    #print(curr_frame.shape)
     kp2, des2 = orb.detectAndCompute(curr_frame, None)
 
     # too few kps: textureless / blurring
@@ -226,7 +241,7 @@ def match_frames(prev_frame, curr_frame, params):
         return False
 
     # fit homograhpy (with some tricks)
-    M, mask = fit_homography( kp1, kp2, matches, np.asarray([w, h]), None)
+    M, mask = fit_homography( kp1, kp2, matches, np.asarray([float(w), float(h)]), None)
     
     #  degenerated homography
     if len(mask) == 0:
@@ -264,10 +279,11 @@ def copy_vid_folder(vid_folder, output_folder, ext=None):
     video_name = os.path.basename(vid_folder)
     video_name.replace(' ', '')
     frame_list = sorted(glob.glob(os.path.join(vid_folder, '*.' + ext)))
+    print(frame_list)
     num_frames = len(frame_list)
     frame_pairs = []
     frame_index = 0
-
+    print(ext)
     # sanity check
     if len(frame_list) == 0:
         print "Can not open video folder: {:s}".format(vid_folder)
@@ -331,7 +347,8 @@ def process_vid_folder(vid_folder, output_folder, max_num_samples,
     frame_pairs = []
     output_frame_list = []
     frame_index = 0
-
+	
+    print(ext)
     # sanity check
     if len(frame_list) == 0:
         print "Can not open video folder: {:s}".format(vid_folder)
@@ -365,6 +382,9 @@ def process_vid_folder(vid_folder, output_folder, max_num_samples,
         pair_ind = pair_ind[:3]
         for ind in pair_ind:
             curr_frame = frame_buffer[ind]
+            #print(prev_frame.shape)
+            #print(curr_frame.shape)
+            #print("before match frame")
             if match_frames(prev_frame, curr_frame, params):
                 good_pair = ind + 1
                 break
@@ -491,6 +511,7 @@ def process_vid_file(vid_file, output_folder, max_num_samples,
         pair_ind = pair_ind[:3]
         for ind in pair_ind:
             curr_frame = frame_buffer[ind]
+    
             if match_frames(prev_frame, curr_frame, params):
                 good_pair = ind + 1
                 break
@@ -583,7 +604,7 @@ if __name__ == '__main__':
         if ('.avi' in os.path.basename(video)) or ('.mp4' in os.path.basename(video)) \
             and os.path.exists(video):
             print "Processing video file: {:s}".format(video)
-            curr_pairs = process_vid_file(video, output_folder, frames_per_video)
+            curr_pairs = process_vid_file(video, output_folder, frames_per_video, ext = args.extIn)
         # video folder?
         elif os.path.isdir(video):
             if copy_frames:
@@ -592,8 +613,9 @@ if __name__ == '__main__':
                 curr_pairs = copy_vid_folder(video, output_folder)
             else:
                 print "Processing video folder: {:s}".format(video)
-                curr_pairs = process_vid_folder(video, output_folder, frames_per_video)
+                curr_pairs = process_vid_folder(video, output_folder, frames_per_video,  ext = args.extIn)
 
+        print(curr_pairs)
         all_pairs = all_pairs + curr_pairs
     
     # now write all pairs to file (in dataset root folder)
