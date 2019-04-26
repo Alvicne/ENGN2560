@@ -5,9 +5,9 @@ function param = globalParam(dataset)
 addpath('./flow_utils');
 addpath('./structured_edges');
 % put piotr's toolbox path here
-addpath(genpath('./toolbox-master'));
+addpath(genpath('gpfs/home/guest443/ENGN2560/bims/toolbox'));
 % put root data folder here
-rootPath = '/home/yin/edge_flow_data';
+rootPath = '/users/guest443/preprocessRes';
 
 %% set up datasets
 % we will mainly use three datasets:
@@ -15,7 +15,7 @@ rootPath = '/home/yin/edge_flow_data';
 % Sintel for benchmark optical flow
 % Video for learning
 % each dataset is defined by a set of frame pairs
-allDatasets = {'bsds', 'sintel', 'video'};
+allDatasets = {'bsds', 'sintel','vsb2'};
 % if we will sample the frames (or simply keep them all)
 allSampleFrames = [0 0 1];
 allScales = [1 1 0.5];
@@ -56,8 +56,8 @@ if exist(fullfile(param.flowPath, 'Groundtruth'), 'dir')
 end
 
 %% binary for deepmatching and epicflow
-param.dmBin = './bins/deepmatching';
-param.efBin = './bins/epicflow';
+param.dmBin = '/users/guest443/ENGN2560/bins/deepmatching_1.2.2_c++/deepmatching-static';
+param.efBin = '/users/guest443/ENGN2560/epicflow/epicflow';
 
 %% for parfor
 param.numProc = 6;

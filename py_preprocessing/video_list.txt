@@ -1,1 +1,2 @@
-/users/guest443/BSR/BSDS500/data/images/train
+/users/guest443/train2560/VSB/lion2
+/users/guest443/train2560/VSB/lion

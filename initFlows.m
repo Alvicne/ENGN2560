@@ -14,6 +14,7 @@ end
 
 %% load the image pair list
 fid = fopen(fullfile(param.rootPath, sprintf('%s_pairs.txt', param.dataset)), 'r');
+disp(fullfile(param.rootPath, sprintf('%s_pairs.txt', param.dataset)))
 pairList =textscan(fid,'%s %s');
 fclose(fid);
 
