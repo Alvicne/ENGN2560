@@ -5,7 +5,7 @@ function param = globalParam(dataset)
 addpath('./flow_utils');
 addpath('./structured_edges');
 % put piotr's toolbox path here
-addpath(genpath('gpfs/home/guest443/ENGN2560/bims/toolbox'));
+addpath(genpath('/users/guest443/ENGN2560/bins/toolbox'));
 % put root data folder here
 rootPath = '/users/guest443/preprocessRes';
 
