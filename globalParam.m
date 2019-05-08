@@ -2,12 +2,13 @@ function param = globalParam(dataset)
 % setup all the params
 
 %% set up paths
-addpath('./flow_utils');
-addpath('./structured_edges');
+addpath('/users/guest443/ENGN2560');
+addpath('/users/guest443/ENGN2560/flow_utils');
+addpath('/users/guest443/ENGN2560/structured_edges');
 % put piotr's toolbox path here
 addpath(genpath('/users/guest443/ENGN2560/bins/toolbox'));
 % put root data folder here
-rootPath = '/users/guest443/preprocessRes';
+rootPath = '/users/guest443/scratch/preprocessRes';
 
 %% set up datasets
 % we will mainly use three datasets:
@@ -15,7 +16,7 @@ rootPath = '/users/guest443/preprocessRes';
 % Sintel for benchmark optical flow
 % Video for learning
 % each dataset is defined by a set of frame pairs
-allDatasets = {'bsds', 'sintel','vsb2'};
+allDatasets = {'bsds', 'sintel','video'};
 % if we will sample the frames (or simply keep them all)
 allSampleFrames = [0 0 1];
 allScales = [1 1 0.5];
@@ -44,7 +45,7 @@ param.numSamples = 1000;
 
 %% counter and tmp file folder
 param.iter = 0;
-param.tmpFolder = './tmp';
+param.tmpFolder = '/users/guest443/ENGN2560/tmp';
 
 %% check dataset stats
 param.edgeGT = 0;   param.flowGT = 0;
