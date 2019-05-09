@@ -160,10 +160,17 @@ def fit_homography(kp1, kp2, matches, img_size=None, src_img=None):
 
     # convert kp to pts
     #print(len(valid_matches))
+    
     src_pts = np.float32([ kp1[m.queryIdx].pt for m in valid_matches ]).reshape(-1,1,2)
     dst_pts = np.float32([ kp2[m.trainIdx].pt for m in valid_matches ]).reshape(-1,1,2)
 
     # call opencv for homography (with a conservative threshold)
+    print("src_pts")
+    print(len(src_pts))
+    print("dst_pts")
+    print(len(dst_pts))
+    if len(src_pts) < 5 or len(dst_pts) <5:
+        return [[]], []
     M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 1.2)
     matchesMask = mask.ravel().tolist()
 
@@ -348,6 +355,7 @@ def process_vid_folder(vid_folder, output_folder, max_num_samples,
     output_frame_list = []
     frame_index = 0
 	
+
     print(ext)
     # sanity check
     if len(frame_list) == 0:
@@ -357,6 +365,7 @@ def process_vid_folder(vid_folder, output_folder, max_num_samples,
     # fetch the first batch of pairs into buffer
     frame_buffer = []
     for ind in xrange(max_frame_range):
+        print(frame_list[ind])
         frame = cv2.imread(frame_list[ind])
         frame_buffer.append(frame.copy())
 
@@ -419,7 +428,7 @@ def process_vid_folder(vid_folder, output_folder, max_num_samples,
     # resample the frame pairs if too many
     if len(frame_pairs) > max_num_samples:
         print "Resample into {:d} frame pairs".format(max_num_samples)
-        # resample frame pair index
+        # resample frame pair index (randomly select??)
         rand_ind = np.random.permutation(range(len(frame_pairs)))
         sel_pair_ind = rand_ind[:max_num_samples]
         sel_frame_ind = []
@@ -615,6 +624,7 @@ if __name__ == '__main__':
                 print "Processing video folder: {:s}".format(video)
                 curr_pairs = process_vid_folder(video, output_folder, frames_per_video,  ext = args.extIn)
 
+        print("curr_pairs")
         print(curr_pairs)
         all_pairs = all_pairs + curr_pairs
     
