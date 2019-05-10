@@ -1,0 +1,2 @@
+/users/guest443/scratch/datasets/car
+/users/guest443/scratch/datasets/aeroplane

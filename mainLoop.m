@@ -5,7 +5,7 @@ clc;
 %% this is the top level script for our pipeline
 % set up the param struct for all datasets
 sintelParam = globalParam('sintel');
-videoParam = globalParam('vsb2');
+videoParam = globalParam('kitti');
 bsdsParam = globalParam('bsds');
 
 % setup iteration numbers

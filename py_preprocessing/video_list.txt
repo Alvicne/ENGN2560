@@ -1,2 +1,15 @@
 /users/guest443/train2560/VSB/lion2
 /users/guest443/train2560/VSB/lion
+/users/guest443/train2560/VSB/chrome
+/users/guest443/train2560/VSB/drone
+/users/guest443/train2560/VSB/guitar
+/users/guest443/train2560/VSB/knot
+/users/guest443/train2560/VSB/sailing
+/users/guest443/train2560/VSB/soccer
+/users/guest443/train2560/VSB/swing
+/users/guest443/train2560/VSB/tennis
+/users/guest443/train2560/VSB/zoo
+/users/guest443/train2560/VSB/dominoes
+/users/guest443/train2560/VSB/anteater
+/users/guest443/train2560/VSB/galapagos
+/users/guest443/train2560/VSB/excavator

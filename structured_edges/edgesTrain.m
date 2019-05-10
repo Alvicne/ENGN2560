@@ -110,6 +110,7 @@ opts.nTotFtrs = opts.nChnFtrs + opts.nSimFtrs; disp(opts);
 stream=RandStream('mrg32k3a','Seed',opts.seed);
 
 % train nTrees random trees (can be trained with parfor if enough memory)
+
 if(opts.useParfor),
   parfor i=1:nTrees,
     trainTree(trnImgDir, trnGtDir, opts,stream,i);
@@ -182,6 +183,9 @@ function trainTree( trnImgDir, trnGtDir, opts, stream, treeInd )
 
 % location of ground truth
 % note we will only train on the images with GT results
+
+%disp(trnImgDir)
+%disp(trnGtDir)
 imgIds=dir(fullfile(trnGtDir, '*.png'));
 fileExt = '.png';
 if isempty(imgIds);
@@ -217,8 +221,15 @@ RandStream.setGlobalStream( stream );
 % collect positive and negative patches and compute features
 fids=sort(randperm(nTotFtrs,round(nTotFtrs*opts.fracFtrs)));
 k = nPos+nNeg; nImgs=min(nImgs,opts.nImgs);
+%disp("kkkkkk")
+%disp(k)
+%disp(gtWidth)
 ftrs = zeros(k,length(fids),'single');
-labels = zeros(gtWidth,gtWidth,k,'uint8'); k = 0;
+labels = zeros(gtWidth,gtWidth,k,'uint8');
+%disp(labels)
+%disp("nImgs")
+%disp(nImgs)
+k = 0;
 tid = ticStatus('Collecting data',30,1);
 
 % modified by YL
@@ -327,6 +338,8 @@ for i = 1:nImgs
   % compute features and store
   ftrs1=[reshape(psReg,[],k1)' stComputeSimFtrs(psSim,opts)];
   ftrs(k+1:k+k1,:)=ftrs1(:,fids); labels(:,:,k+1:k+k1)=lbls;
+  %disp("labels after lbls")
+  %disp(lbls)
   k=k+k1; if(k==size(ftrs,1)), tocStatus(tid,1); break; end
   tocStatus(tid,i/nImgs);
 end
@@ -335,8 +348,13 @@ if(k<size(ftrs,1)), ftrs=ftrs(1:k,:); labels=labels(:,:,1:k); end
 % train structured edge classifier (random decision tree)
 pTree=struct('minCount',opts.minCount, 'minChild',opts.minChild, ...
   'maxDepth',opts.maxDepth, 'H',opts.nClasses, 'split',opts.split);
+%disp("labels before")
+%disp(labels)
 t=labels; labels=cell(k,1); for i=1:k, labels{i}=t(:,:,i); end
 pTree.discretize=@(hs,H) discretize(hs,H,opts.nSamples,opts.discretize);
+%disp("labels+ ftrs in edgestrain")
+%disp(labels)
+%disp(ftrs)
 tree=forestTrain(ftrs,labels,pTree); tree.hs=cell2array(tree.hs);
 tree.fids(tree.child>0) = fids(tree.fids(tree.child>0)+1)-1;
 if(~exist(treeDir,'dir')), mkdir(treeDir); end

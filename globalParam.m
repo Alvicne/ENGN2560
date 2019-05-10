@@ -16,7 +16,7 @@ rootPath = '/users/guest443/scratch/preprocessRes';
 % Sintel for benchmark optical flow
 % Video for learning
 % each dataset is defined by a set of frame pairs
-allDatasets = {'bsds', 'sintel','video'};
+allDatasets = {'bsds', 'sintel','kitti'};
 % if we will sample the frames (or simply keep them all)
 allSampleFrames = [0 0 1];
 allScales = [1 1 0.5];
