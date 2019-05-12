@@ -1,7 +1,7 @@
 % run flow
 
 % read the images
-% addpath('/tools');
+addpath('/tools');
 % imgPath = '/users/guest438/scratch/ENGN2560/data/motorbike/';
 % imgDir = dir([imgPath '*.jpg']);
 fid = fopen('/users/guest438/scratch/ENGN2560/res/aeroplane/aeroplane_pairs.txt', 'r');
@@ -28,7 +28,7 @@ for i = 1:length(randId)
     d = sum(sum(sqrt(U.^2+V.^2)))/(h*w);
     dsum = dsum+d;
 end
-average_disp = dsum/(length(imgDir)-1);
+average_disp = dsum/1000;
 disp(average_disp);
 
 %%
