@@ -1,4 +1,4 @@
-function model = edgesTrain( varargin )
+function model = edgesTrain_d( varargin )
 % Train structured edge detector.
 %
 % For an introductory tutorial please see edgesDemo.m.

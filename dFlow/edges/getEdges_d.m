@@ -1,4 +1,4 @@
-function E = getEdges(I,model)
+function E = getEdges_d(I,model)
 
 %   opts=edgesTrain();                % default options
 %   opts.modelDir=p.pEdgModels;       % model will be in models/forest

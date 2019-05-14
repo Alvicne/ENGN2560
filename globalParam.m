@@ -2,27 +2,27 @@ function param = globalParam(dataset)
 % setup all the params
 
 %% set up paths
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/flow_utils');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/structured_edges');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/discreteFlow');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/bcd');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/parameters');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/edges');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/util');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/external/EpicFlow_v1.00');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/external/edges');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/external/flow-code-matlab');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/external/piotr_toobox');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/build');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/flann-1.8.4-src');
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/outlier-rejection');
+addpath('/users/guest443/scratch/temp/ENGN2560/flow_utils');
+addpath('/users/guest443/scratch/temp/ENGN2560/structured_edges');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/discreteFlow');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/bcd');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/parameters');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/edges');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/util');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/EpicFlow_v1.00');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/edges');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/flow-code-matlab');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/piotr_toolbox');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/build');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/flann-1.8.4-src');
+addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/outlier_rejection');
 
 %addpath('/users/guest438/scratch/ENGN2560/ENGN2560/structured_edges/private');
 % put piotr's toolbox path here
-addpath(genpath('/users/guest438/scratch/ENGN2560/ENGN2560/bins/toolbox'));
+addpath(genpath('/users/guest443/scratch/temp/ENGN2560/bins/toolbox'));
 % put root data folder here
-addpath('/users/guest438/scratch/ENGN2560/ENGN2560');
-rootPath = '/users/guest438/scratch/ENGN2560/res';
+addpath('/users/guest443/scratch/temp/ENGN2560');
+rootPath = '/users/guest443/scratch/resPreprocess';
 
 %% set up datasets
 % we will mainly use three datasets:
@@ -30,7 +30,7 @@ rootPath = '/users/guest438/scratch/ENGN2560/res';
 % Sintel for benchmark optical flow
 % Video for learning
 % each dataset is defined by a set of frame pairs
-allDatasets = {'bsds', 'sintel','motorbike'};
+allDatasets = {'bsds', 'sintel','bird'};
 % if we will sample the frames (or simply keep them all)
 allSampleFrames = [0 0 1];
 allScales = [1 1 0.5];
@@ -59,7 +59,7 @@ param.numSamples = 1000;
 
 %% counter and tmp file folder
 param.iter = 0;
-param.tmpFolder = '/users/guest438/scratch/ENGN2560/ENGN2560/tmp';
+param.tmpFolder = '/users/guest443/scratch/temp/ENGN2560/tmp';
 
 %% check dataset stats
 param.edgeGT = 0;   param.flowGT = 0;
@@ -71,9 +71,9 @@ if exist(fullfile(param.flowPath, 'Groundtruth'), 'dir')
 end
 
 %% binary for deepmatching and epicflow
-param.dmBin = '/users/guest438/scratch/ENGN2560/ENGN2560/bins/deepmatching_1.2.2_c++/deepmatching-static';
-param.efBin = '/users/guest438/scratch/ENGN2560/ENGN2560/bins/epicflow';
+param.dmBin = '/users/guest443/scratch/temp/ENGN2560/bins/deepmatching_1.2.2_c++/deepmatching-static';
+param.efBin = '/users/guest443/scratch/temp/ENGN2560/bins/epicflow';
 
 %% for parfor
-param.numProc = 5;
+param.numProc = 8;
 

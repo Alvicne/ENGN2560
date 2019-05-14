@@ -5,7 +5,7 @@ clc;
 %% this is the top level script for our pipeline
 % set up the param struct for all datasets
 sintelParam = globalParam('sintel');
-videoParam = globalParam('motorbike');
+videoParam = globalParam('bird');
 bsdsParam = globalParam('bsds');
 
 % setup iteration numbers
@@ -63,7 +63,7 @@ for iter = startIter:numIter
     % increase the number of training samples for the last iter (boosting performance a bit)
     model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder),videoParam.fileExt, ...
       'modelFnm', [videoParam.dataset '_' currFolder], 'scale', videoParam.scale, ...
-      'modelDir', videoParam.tmpFolder, 'threshBracket', threshBracket, 'nPos', 2e6, 'nNeg', 2e6);
+      'modelDir', videoParam.tmpFolder, 'threshBracket', threshBracket);
     % recover the matlab pool
     delete(gcp); pObj = parpool(videoParam.numProc);
   else 

@@ -13,7 +13,7 @@ if ~exist(flowFolder, 'dir')
 end
 
 %% load the image pair list
-fid = fopen(fullfile(param.rootPath, sprintf('motorbike_pairs.txt')), 'r');
+fid = fopen(fullfile(param.rootPath, sprintf('%s_pairs.txt', param.dataset)), 'r');
 pairList =textscan(fid,'%s %s');
 fclose(fid);
 

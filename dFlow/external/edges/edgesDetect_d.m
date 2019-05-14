@@ -1,4 +1,4 @@
-function [E,O,inds,segs] = edgesDetect( I, model )
+function [E,O,inds,segs] = edgesDetect_d( I, model )
 % Detect edges in image.
 %
 % For an introductory tutorial please see edgesDemo.m.
