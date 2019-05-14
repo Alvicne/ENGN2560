@@ -13,7 +13,7 @@ if ~exist(flowFolder, 'dir')
 end
 
 %% load the image pair list
-fid = fopen(fullfile(param.rootPath, sprintf('%s_pairs.txt', param.dataset)), 'r');
+fid = fopen(fullfile(param.rootPath, sprintf('motorbike_pairs.txt')), 'r');
 pairList =textscan(fid,'%s %s');
 fclose(fid);
 
@@ -40,13 +40,15 @@ parfor i=1:length(randIdx)
   
   % output file
   outFileName = fullfile(flowFolder, [curFileName '.flo']);
-  
+%   fn = '/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/parameters/sintel_parameters.mat';
+
   % call epic flow only if necessary
   if ~exist(outFileName, 'file')
     fprintf('EpicFlow for %s\n', outFileName)
     myCmd = sprintf('%s %s %s %s %s -sobel %s', ...
       param.efBin, curImgName, nextImgName, dmFileName, outFileName, param.flowFlag);
     system(myCmd);
+%       [F,p] = discreteFlow(curFileName,nextFileName,curImgName,nextImgName,flowFolder,fn,param.dataset,'testing');
   end
   
 end

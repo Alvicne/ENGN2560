@@ -1,0 +1,154 @@
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basi2c16.png.GRAY.16.out cmp/pngsuite/basi2c16.png.GRAY.16.out differ: byte 60, line 3
+out/pngsuite/basi2c16.png.GRAY.16.out cmp/pngsuite/basi2c16.png.GRAY.16.out differ: byte 60, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basi2c16.png.GA.16.out cmp/pngsuite/basi2c16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/basi2c16.png.GA.16.out cmp/pngsuite/basi2c16.png.GA.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basi6a16.png.GRAY.16.out cmp/pngsuite/basi6a16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/basi6a16.png.GRAY.16.out cmp/pngsuite/basi6a16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basi6a16.png.GA.16.out cmp/pngsuite/basi6a16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/basi6a16.png.GA.16.out cmp/pngsuite/basi6a16.png.GA.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basn2c16.png.GRAY.16.out cmp/pngsuite/basn2c16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/basn2c16.png.GRAY.16.out cmp/pngsuite/basn2c16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basn2c16.png.GA.16.out cmp/pngsuite/basn2c16.png.GA.16.out differ: byte 52, line 3
+out/pngsuite/basn2c16.png.GA.16.out cmp/pngsuite/basn2c16.png.GA.16.out differ: byte 52, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basn6a16.png.GRAY.16.out cmp/pngsuite/basn6a16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/basn6a16.png.GRAY.16.out cmp/pngsuite/basn6a16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/basn6a16.png.GA.16.out cmp/pngsuite/basn6a16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/basn6a16.png.GA.16.out cmp/pngsuite/basn6a16.png.GA.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/bgan6a16.png.GRAY.16.out cmp/pngsuite/bgan6a16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/bgan6a16.png.GRAY.16.out cmp/pngsuite/bgan6a16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/bgan6a16.png.GA.16.out cmp/pngsuite/bgan6a16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/bgan6a16.png.GA.16.out cmp/pngsuite/bgan6a16.png.GA.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/bgyn6a16.png.GRAY.16.out cmp/pngsuite/bgyn6a16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/bgyn6a16.png.GRAY.16.out cmp/pngsuite/bgyn6a16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/bgyn6a16.png.GA.16.out cmp/pngsuite/bgyn6a16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/bgyn6a16.png.GA.16.out cmp/pngsuite/bgyn6a16.png.GA.16.out differ: byte 53, line 3
+out/pngsuite/s09i3p02.png.RGB.8.out cmp/pngsuite/s09i3p02.png.RGB.8.out differ: byte 58, line 3
+out/pngsuite/s09i3p02.png.RGB.8.out cmp/pngsuite/s09i3p02.png.RGB.8.out differ: byte 58, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/tbbn2c16.png.GRAY.16.out cmp/pngsuite/tbbn2c16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/tbbn2c16.png.GRAY.16.out cmp/pngsuite/tbbn2c16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/tbbn2c16.png.GA.16.out cmp/pngsuite/tbbn2c16.png.GA.16.out differ: byte 52, line 3
+out/pngsuite/tbbn2c16.png.GA.16.out cmp/pngsuite/tbbn2c16.png.GA.16.out differ: byte 52, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/tbgn2c16.png.GRAY.16.out cmp/pngsuite/tbgn2c16.png.GRAY.16.out differ: byte 53, line 3
+out/pngsuite/tbgn2c16.png.GRAY.16.out cmp/pngsuite/tbgn2c16.png.GRAY.16.out differ: byte 53, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+out/pngsuite/tbgn2c16.png.GA.16.out cmp/pngsuite/tbgn2c16.png.GA.16.out differ: byte 52, line 3
+out/pngsuite/tbgn2c16.png.GA.16.out cmp/pngsuite/tbgn2c16.png.GA.16.out differ: byte 52, line 3
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED
+convert_color_space: expected 8-bit data but found 16-bit; recompile with PNG_READ_16_TO_8_SUPPORTED

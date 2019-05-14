@@ -4,7 +4,7 @@
 addpath('/tools');
 % imgPath = '/users/guest438/scratch/ENGN2560/data/motorbike/';
 % imgDir = dir([imgPath '*.jpg']);
-fid = fopen('/users/guest438/scratch/ENGN2560/res/aeroplane/aeroplane_pairs.txt', 'r');
+fid = fopen('/users/guest438/scratch/ENGN2560/res/motorbike/motorbike_pairs.txt', 'r');
 pairlist =textscan(fid,'%s %s');
 fclose(fid);
 randId = randperm(length(pairlist{1}),1000);
