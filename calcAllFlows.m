@@ -44,7 +44,7 @@ parfor i=1:length(pairList{1})
   outFileName = fullfile(flowFolder, [curFileName '.flo']);
   
   % call epic flow only if edge file exists
-  fn = '/users/guest443/scratch/temp/ENGN2560/dFlow/parameters/sintel_parameters.mat';
+  fn = './dFlow/parameters/sintel_parameters.mat';
   if exist(edgeFileName, 'file') && ~exist(outFileName, 'file')
 %     fprintf('EpicFlow for %s\n', outFileName)
 %     % note all flow param should be after flow flag!

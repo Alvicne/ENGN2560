@@ -8,7 +8,7 @@ disp(fnParameters);
 p.mode = 'testing'; 
 p.dSet = dataset;
 
-p.pEfSrc = '/users/guest443/scratch/temp/ENGN2560/dFlow/external/EpicFlow_v1.00'; 
+p.pEfSrc = './external/EpicFlow_v1.00'; 
 
 p.Img1 = Img1;
 p.Img2 = Img2;
@@ -18,7 +18,6 @@ p.Img2 = Img2;
 % end
 
 % p.shot = i_shot;
-disp('discrete flow start+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 % set Daisy parameters
 pDaisy.R  =  p.daisy_R;  % radius of the descriptor
 pDaisy.RQ =  p.daisy_RQ; % number of rings
@@ -92,7 +91,6 @@ p.fnEfEdg=[p.fnEfEdg(1:end-4),'_edges.bin'];
 disp(p.stride);
 
 [p,F_bcd]=bcdFlow(model,p,pDaisy,pFlann,1);
-disp('outliers++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 if p.outliers==1
   %No fw/bw check: simply remove small isolated segments
   pOutliers.fwBw = 0;
@@ -111,7 +109,6 @@ elseif p.outliers==2
   % save result
   flow_write(F_bcd,fullfile(p.pClean,p.fnIm1));
 end
-disp('write deep matches++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 % mimic DeepMatches
 p=writeDeepmatches(p,F_bcd);
 F = F_bcd;
@@ -125,11 +122,9 @@ end
 if exist(p.fnDm,'file')
   movefile(p.fnDm,[p.fnDm(1:end-21),'.txt'])
 end
-disp('tset out here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 if p.refinement>0
   if exist(p.fnEf,'file')
 %     filename = [p.fnEf(1:end-21),'.flo'];
-    disp('out here ++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     disp(p.fnEf)
     disp(outFileName)
 %     movefile(p.fnEf,outFileName);

@@ -2,24 +2,24 @@ function param = globalParam(dataset)
 % setup all the params
 
 %% set up paths
-addpath('/users/guest443/scratch/temp/ENGN2560/flow_utils');
-addpath('/users/guest443/scratch/temp/ENGN2560/structured_edges');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/discreteFlow');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/bcd');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/parameters');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/edges');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/util');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/EpicFlow_v1.00');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/edges');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/flow-code-matlab');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/piotr_toolbox');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/build');
-addpath(genpath('/users/guest443/scratch/temp/ENGN2560/dFlow/flann-1.8.4-src'));
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/outlier_rejection');
-addpath(genpath('/users/guest443/scratch/temp/ENGN2560/dFlow/daisy_matlab'));
+addpath('./flow_utils');
+addpath('./structured_edges');
+addpath('./dFlow/discreteFlow');
+addpath('./dFlow/bcd');
+addpath('./dFlow/parameters');
+addpath('./dFlow/edges');
+addpath('./dFlow/util');
+addpath('./dFlow/external/EpicFlow_v1.00');
+addpath('./dFlow/external/edges');
+addpath('./dFlow/external/flow-code-matlab');
+addpath('./dFlow/external/piotr_toolbox');
+addpath('./dFlow/build');
+addpath(genpath('./dFlow/flann-1.8.4-src'));
+addpath('./dFlow/outlier_rejection');
+addpath(genpath('./dFlow/daisy_matlab'));
 %addpath('/users/guest438/scratch/ENGN2560/ENGN2560/structured_edges/private');
 % put piotr's toolbox path here
-addpath(genpath('/users/guest443/scratch/temp/ENGN2560/bins/toolbox'));
+addpath(genpath('./bins/toolbox'));
 % put root data folder here
 addpath('/users/guest443/scratch/temp/ENGN2560');
 rootPath = '/users/guest443/scratch/resPreprocess';
