@@ -16,12 +16,12 @@ rootPath = '/users/guest443/scratch/preprocessRes';
 % Sintel for benchmark optical flow
 % Video for learning
 % each dataset is defined by a set of frame pairs
-allDatasets = {'bsds', 'sintel','kitti'};
+allDatasets = {'bsds', 'sintel','cow'};
 % if we will sample the frames (or simply keep them all)
 allSampleFrames = [0 0 1];
 allScales = [1 1 0.5];
 allFlowFlags = {'-sintel', '-sintel', '-sintel'};
-allFileExt = {'.jpg', '.png', '.png'};
+allFileExt = {'.jpg', '.png', '.jpg'};
 
 % set up dataset params
 index = strcmp(dataset, allDatasets);
@@ -61,5 +61,5 @@ param.dmBin = '/users/guest443/ENGN2560/bins/deepmatching_1.2.2_c++/deepmatching
 param.efBin = '/users/guest443/ENGN2560/epicflow/epicflow';
 
 %% for parfor
-param.numProc = 6;
+param.numProc = 8;
 

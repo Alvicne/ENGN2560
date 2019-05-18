@@ -165,10 +165,10 @@ def fit_homography(kp1, kp2, matches, img_size=None, src_img=None):
     dst_pts = np.float32([ kp2[m.trainIdx].pt for m in valid_matches ]).reshape(-1,1,2)
 
     # call opencv for homography (with a conservative threshold)
-    print("src_pts")
-    print(len(src_pts))
-    print("dst_pts")
-    print(len(dst_pts))
+    #print("src_pts")
+   # print(len(src_pts))
+   # print("dst_pts")
+   # print(len(dst_pts))
     if len(src_pts) < 5 or len(dst_pts) <5:
         return [[]], []
     M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 1.2)

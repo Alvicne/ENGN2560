@@ -26,9 +26,14 @@ end
 %% run the detector
 imgList = dir(fullfile(imgFolder, '*.jpg'));
 parfor i=1:length(imgList)
+ 
   outfile = fullfile(resFolder, [imgList(i).name(1:end-4) '.png']);
   if exist(outfile, 'file'), continue; end
+  disp("test image here")
+  disp(fullfile(imgFolder, imgList(i).name))
   img = imread(fullfile(imgFolder, imgList(i).name));
+  %disp("image here");
+  %disp(img);
   edgeMap = edgesDetect(img, img, model);
   imwrite(edgeMap, outfile);
 end

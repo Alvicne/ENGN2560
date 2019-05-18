@@ -5,7 +5,7 @@ clc;
 %% this is the top level script for our pipeline
 % set up the param struct for all datasets
 sintelParam = globalParam('sintel');
-videoParam = globalParam('kitti');
+videoParam = globalParam('cow');
 bsdsParam = globalParam('bsds');
 
 % setup iteration numbers
@@ -61,13 +61,13 @@ for iter = startIter:numIter
     % re-allocate matlab parpool (saving us memory)
     delete(gcp); pObj = parpool(2);
     % increase the number of training samples for the last iter (boosting performance a bit)
-    model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder), ...
+    model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder),videoParam.fileExt, ...
       'modelFnm', [videoParam.dataset '_' currFolder], 'scale', videoParam.scale, ...
-      'modelDir', videoParam.tmpFolder, 'threshBracket', threshBracket, 'nPos', 2e6, 'nNeg', 2e6);
+      'modelDir', videoParam.tmpFolder, 'threshBracket', threshBracket);
     % recover the matlab pool
     delete(gcp); pObj = parpool(videoParam.numProc);
   else 
-    model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder), ...
+    model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder),videoParam.fileExt,...
       'modelFnm', [videoParam.dataset '_' currFolder], 'scale', videoParam.scale, ...
       'modelDir', videoParam.tmpFolder, 'threshBracket', threshBracket);
   end
@@ -82,8 +82,10 @@ for iter = startIter:numIter
   %% (5) benchmark for edge/flow (kind of slow)
   % benchmark edge detection results on bsds
   if iter == numIter
+    disp("start to evaluate------------------")
     [ODS, OIS, ODT, AP, R50] = evalEdgeResults(model, currFolder, 'accurate');
   else
+    disp("start to evaluate-------------------------")
     [ODS, OIS, ODT, AP, R50] = evalEdgeResults(model, currFolder, 'fast');
   end
   

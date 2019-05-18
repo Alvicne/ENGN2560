@@ -1,4 +1,4 @@
-function model = edgesTrain( trnImgDir, trnGtDir, varargin )
+function model = edgesTrain( trnImgDir, trnGtDir,imgExt, varargin )
 % Train structured edge detector.
 %
 % For an introductory tutorial please see edgesDemo.m.
@@ -113,11 +113,11 @@ stream=RandStream('mrg32k3a','Seed',opts.seed);
 
 if(opts.useParfor),
   parfor i=1:nTrees,
-    trainTree(trnImgDir, trnGtDir, opts,stream,i);
+    trainTree(trnImgDir, trnGtDir, opts,stream,i,imgExt);
   end
 else
   for i=1:nTrees,
-    trainTree(trnImgDir, trnGtDir, opts,stream,i);
+    trainTree(trnImgDir, trnGtDir, opts,stream,i,imgExt);
   end
 end
 
@@ -178,7 +178,7 @@ eBnds=eBnds'; model.eBnds=uint32([0; cumsum(eBnds(:))]);
 end
 
 %% the main function for training
-function trainTree( trnImgDir, trnGtDir, opts, stream, treeInd )
+function trainTree( trnImgDir, trnGtDir, opts, stream, treeInd, imgExt )
 % Train a single tree in forest model.
 
 % location of ground truth
@@ -237,7 +237,7 @@ for i = 1:nImgs
   % get image and compute channels
   me=imread(fullfile(trnGtDir, [imgIds{i} fileExt]));
   me = im2double(me);
-  I=imread(fullfile(trnImgDir, [imgIds{i} fileExt]));
+  I=imread(fullfile(trnImgDir, [imgIds{i} imgExt]));
   nGt = opts.nGt;
   
   % resize the image and groundtruth if necessary
