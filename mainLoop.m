@@ -59,7 +59,7 @@ for iter = startIter:numIter
   %% (2) motion boundary -> train edge detector
   if iter == numIter
     % re-allocate matlab parpool (saving us memory)
-    delete(gcp); pObj = parpool(2);
+    %delete(gcp); pObj = parpool(2);
     % increase the number of training samples for the last iter (boosting performance a bit)
     model = edgesTrain( videoParam.imgPath, fullfile(videoParam.motEdgePath, currFolder),videoParam.fileExt, ...
       'modelFnm', [videoParam.dataset '_' currFolder], 'scale', videoParam.scale, ...

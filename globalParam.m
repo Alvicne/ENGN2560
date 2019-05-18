@@ -14,9 +14,9 @@ addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/edges');
 addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/flow-code-matlab');
 addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/external/piotr_toolbox');
 addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/build');
-addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/flann-1.8.4-src');
+addpath(genpath('/users/guest443/scratch/temp/ENGN2560/dFlow/flann-1.8.4-src'));
 addpath('/users/guest443/scratch/temp/ENGN2560/dFlow/outlier_rejection');
-
+addpath(genpath('/users/guest443/scratch/temp/ENGN2560/dFlow/daisy_matlab'));
 %addpath('/users/guest438/scratch/ENGN2560/ENGN2560/structured_edges/private');
 % put piotr's toolbox path here
 addpath(genpath('/users/guest443/scratch/temp/ENGN2560/bins/toolbox'));

@@ -27,6 +27,7 @@ disp(pairList);
 %% compute flow for image pairs with edge maps
 parfor i=1:length(pairList{1})
   disp("in loop")
+  disp(i)
   % image pairs
   [~, curFileName, ~] = fileparts(pairList{1}{i});
   [~, nextFileName, ~] = fileparts(pairList{2}{i});
@@ -43,7 +44,7 @@ parfor i=1:length(pairList{1})
   outFileName = fullfile(flowFolder, [curFileName '.flo']);
   
   % call epic flow only if edge file exists
-  fn = '/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/parameters/sintel_parameters.mat';
+  fn = '/users/guest443/scratch/temp/ENGN2560/dFlow/parameters/sintel_parameters.mat';
   if exist(edgeFileName, 'file') && ~exist(outFileName, 'file')
 %     fprintf('EpicFlow for %s\n', outFileName)
 %     % note all flow param should be after flow flag!

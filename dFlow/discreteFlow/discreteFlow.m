@@ -8,7 +8,7 @@ disp(fnParameters);
 p.mode = 'testing'; 
 p.dSet = dataset;
 
-p.pEfSrc = '/users/guest438/scratch/ENGN2560/ENGN2560/dFlow/external/EpicFlow_v1.00'; 
+p.pEfSrc = '/users/guest443/scratch/temp/ENGN2560/dFlow/external/EpicFlow_v1.00'; 
 
 p.Img1 = Img1;
 p.Img2 = Img2;

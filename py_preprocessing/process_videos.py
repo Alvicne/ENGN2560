@@ -117,10 +117,6 @@ def distribute_keypoints(kps, img_size, grid_size, num_features):
     grid_width, grid_height = np.ceil(img_size / grid_size)
 
     # insert kp into grids
-    #print(img_size)
-    #print((grid_width, grid_height))
-    #print(grid_size)
-    #print(num_features)
     for kp_ind, kp in enumerate(kps):
         x, y = kp.pt
         score = kp.response
@@ -159,16 +155,11 @@ def fit_homography(kp1, kp2, matches, img_size=None, src_img=None):
         valid_matches = [m for m in matches if m.queryIdx in kp_list]
 
     # convert kp to pts
-    #print(len(valid_matches))
     
     src_pts = np.float32([ kp1[m.queryIdx].pt for m in valid_matches ]).reshape(-1,1,2)
     dst_pts = np.float32([ kp2[m.trainIdx].pt for m in valid_matches ]).reshape(-1,1,2)
 
     # call opencv for homography (with a conservative threshold)
-    #print("src_pts")
-    #print(len(src_pts))
-    #print("dst_pts")
-    #print(len(dst_pts))
     if len(src_pts) < 5 or len(dst_pts) <5:
         return [[]], []
     M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 1.2)
@@ -206,8 +197,6 @@ def match_frames(prev_frame, curr_frame, params):
     # init orb detector/matcher
     orb = cv2.ORB(num_feats)
     bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-    #print(prev_frame.shape)
-    #print(curr_frame.shape)
     # resize frames if necessary
     if np.abs(scale-1) > 1e-3:
         prev_frame = cv2.resize(prev_frame, (0,0), fx=scale, fy=scale)
@@ -230,10 +219,6 @@ def match_frames(prev_frame, curr_frame, params):
     #print(kp1)
     for kp_ind, kp in enumerate(kp1):
         x, y = kp.pt
-       # print(kp_ind)
-       # print((x,y))
-    #print(prev_frame.shape)
-    #print(curr_frame.shape)
     kp2, des2 = orb.detectAndCompute(curr_frame, None)
 
     # too few kps: textureless / blurring
